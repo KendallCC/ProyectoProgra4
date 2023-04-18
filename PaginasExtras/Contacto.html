@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+
+  <!-- Importar Bootstrap CSS -->
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+  
+
+
+  <!-- Barra de Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-color">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><img src="../assets/images/banners/GameZone.png" width="50px" alt="">
+        GameZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AboutUs.html">Acerca de nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacto.html">Contactenos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Localizacion.html">Ubicación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Historia.html">Historia</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Contenido principal -->
+  <div class="container mt-5 mb-5 pt-5 pb-5">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2 class="text-center mb-4">Formulario de Contacto</h2>
+        <form action="#" method="post" id="form">
+          <div class="field">
+            <label for="correo">Correo</label>
+            <input type="email" class="form-control" name="correo" id="correo" required>
+          </div>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="nombre" required>
+          </div>
+          <div class="field">
+            <label for="Fecha">Fecha de nacimiento</label>
+            <input type="date" onchange="CalcularEdad()" class="form-control" name="Fecha" id="Fecha" required>
+          </div>
+          <div class="field">
+            <label for="Rango">Rango</label>
+            <input type="range" class="form-range" min="0" max="1000000" name="Rango" id="Rango" required>
+          </div>
+          <div class="field" hidden>
+            <label for="Edad">Edad</label>
+            <input type="number" class="form-control" name="Edad" id="Edad" required>
+          </div>
+          <div class="field">
+            <label for="Genero">Genero</label>
+            <select class="custom-select mr-sm-2 m-4" id="Genero" name="Genero" required>
+              <option selected>Seleccione una opcion</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="Grado">Grado</label>
+            <select class="form-select" multiple aria-label="multiple select example" id="Grado" name="Grado" required>
+
+              <option value="Diplomado">Diplomado</option>
+              <option value="Bachillerato">Bachillerato</option>
+              <option value="licenciatura">licenciatura</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="Mensaje">Mensaje</label>
+            <textarea class="form-control" aria-label="With textarea" name="Mensaje" id="Mensaje" required></textarea>
+          </div>
+
+          <input type="submit" class="btn btn-dark m-3 text-center" id="button" value="Enviar Correo">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid bg-dark" style="margin-top: 10rem;">
+    <ul class="wrapper">
+      <!-- <li class="icon ">
+        <span class="tooltip text-bg-info">About</span>
+        <a href="./AboutUs.html"><i class="fa-solid fa-user"></i></a>
+      </li>
+      <li class="icon">
+        <span class="tooltip text-bg-primary">Contactenos</span>
+        <a href="./Contacto.html"><i class="fa-solid fa-address-card"></i></a>
+      </li>
+      <li class="icon">
+        <span class="tooltip text-bg-secondary">Historia</span>
+        <a href="./Historia.html"><i class="fa-solid fa-h"></i></a> -->
+
+        <li class="icon facebook p-4">
+          <span class="tooltip text-bg-secondary">Facebook</span>
+          <a href="https://www.facebook.com/profile.php?id=100091322366392&is_tour_dismissed=true"><i class="fa-brands fa-facebook fa-2xl" style="color: #386ecc;"></i></a>
+      </li>
+
+      <li class="icon instagram">
+          <span class="tooltip text-bg-secondary">Intagram</span>
+          <a href="https://instagram.com/gamezonecri?igshid=ZDdkNTZiNTM="><i class="fa-brands fa-instagram" style="color: #000000;"></i></a>
+      </li>
+
+      <li class="icon whatsapp">
+          <span class="tooltip text-bg-secondary">Whatsapp</span>
+          <a href="https://api.whatsapp.com/send/?phone=86586810"><i class="fa-brands fa-square-whatsapp fa-2xl" style="color: #3cec88;"></i></a>
+      </li>
+
+      </li>
+    </ul>
+    <p class="text-center text-white">© 2023 GameZone</p>
+  </footer>
+
+
+
+  <script src="../assets/js/moment.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('q98wkShMIRs68yQ_4')
+  </script>
+
+
+
+  <!-- Importar jQuery y Bootstrap JS -->
+  <script src="https://kit.fontawesome.com/af90f5be36.js" crossorigin="anonymous"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/correo.js"></script>
+</body>
+
+</html>
